@@ -22,5 +22,36 @@ async function submit() {
         running = false;
         return;
     }
+    for(const [user, pass] of Object.entries(data)) {
+        let result;
+        if(username === user && password === pass) {
+            result =  document.createElement("div");
+            result.classList.add("log-box");
+            result.textContent = "Login succeful!";
+        } else {
+            result =  document.createElement("div");
+            result.classList.add("log-box-fail");
+            result.textContent = `---\nUser: ${user} \n Pass: ${pass}) \n does not match the given credentials \n (user=${username}, pass=${password}) \n Trying next entry in database...`;
+        }
+        terminal.append(result);
+        await wait(700);
     running = false;
+    }
+}
+let terminalIsToggled = false;
+function terminalToggle() {
+    const terminal = document.getElementById("terminal");
+    const button = document.getElementById("toggle-logs");
+    if(!terminalIsToggled) {
+        terminal.classList.add("funny-box");
+        button.innerHTML = `Hide Logs`;
+        terminalIsToggled = true;
+    }
+    else{
+        terminal.classList.remove("funny-box");
+        button.innerHTML = `Show Logs`;
+        terminalIsToggled = false;
+        
+    }
+    
 }
