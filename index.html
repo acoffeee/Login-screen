@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad login lol</title>
+    <link rel="stylesheet" href="frontend/style.css">
+</head>
+<body>
+    <main>
+            <div class="everything-box">
+                <div class="greeting-box">
+                    <h1 style="font-size: 3em; display: grid; justify-content: left; place-items: left">Your brews are waiting.</h1>
+                    
+                    <p> At Coffee Inc. We strive to achieive sustainable pracitces and good working conditions. We strongly believe in the fair trade act and fair compensation. We ensure that every coffee bean that is picked is picked by a happy farmer. We dont use overly aggressive pesticides or GMOS. We believe organic foods are important for a blanaced diet.</p>
+                    <div class="social-medias">
+                        <div class="social-media" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png');">
+                        </div>
+                        <div class="social-media" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original');">
+                        </div>
+                        <div class="social-media" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/1280px-X_logo.jpg');">
+                            
+                        </div>
+                        <a href="https://github.com/acoffeee/Login-screen/tree/database-leak-%2B-check-each-db-entry-%2B-rate-limiting-to-be-slow">
+                            <div class="social-media" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg');">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div id="loginbox" class="login-box">
+                    <h2 style=" justify-content: center; font-size: 1.7em; display: grid; align-items: center; margin: 0; padding-bottom: 5%;">Login</h2>
+                    <div class="input-container">
+                        Username
+                        <input class="input-box" id="user" type="text" readonly >
+                    </div>
+                    <div class="input-container">
+                        Password
+                        <input class="input-box" id="pass" type="text" readonly> 
+                    </div>
+                    <div style="align-items: center; display: flex; font-size: 60%;">
+                        <input style="width: 7%; height: auto" type="checkbox"> Remember me
+                    </div>
+                    <div style="display: flex">
+                        <button id="submitDetails" class="input-box" style="font-size: 50%; width: 30%; background-color: white; border-radius: none; font-family: sans-serif;">Enter</button>
+                        <button id="toggleKeyboard" class="input-box" style="font-size: 50%; width: 30%; background-color: white; border-radius: none; font-family: sans-serif;">Show Keyboard</button>
+                    </div>
+                </div>
+            </div>
+        <div id="keyboard" class="keyboard-frame" style="display: none;">
+        </div>
+    </main>
+    <script src="backend/database/data.js" type="module"></script>
+    <script src="backend/api/main.js" type="module"></script>
+    <script src="frontend/script.js" type="module"></script>
+    <script src="frontend/keyboard.js" type="module"></script>
+</body>
+</html>
