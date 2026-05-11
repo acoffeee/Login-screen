@@ -1,5 +1,4 @@
-
-export const data = {
+const data = {
   "jdoe92": "BlueSky!482",
   "emma_w": "Sunset#914",
   "liam23": "TigerPaw77",
@@ -244,3 +243,4 @@ export const data = {
     "solarvector": "xT4&nWr9Lm",
     "silentbadger": "R6!kLp3Ka"
 };
+export default data;
